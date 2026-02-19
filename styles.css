@@ -364,44 +364,56 @@ nav .container {
     box-shadow: 0 20px 50px rgba(48, 66, 84, 0.12);
 }
 
+.portfolio-category {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--pink);
+    display: inline-block;
+}
+
+.portfolio-category:first-of-type {
+    margin-top: 0;
+}
+
 .portfolio-thumb {
-    height: 240px;
-    background: linear-gradient(135deg, var(--pink) 0%, var(--blue) 100%);
+    height: 260px;
+    background: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
-.portfolio-thumb.thumb-2 {
-    background: linear-gradient(135deg, var(--blue) 0%, var(--dark) 100%);
+.portfolio-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.portfolio-thumb.thumb-3 {
-    background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink) 100%);
+.portfolio-thumb.thumb-vsl {
+    height: auto;
+    aspect-ratio: 4 / 5;
 }
 
-.portfolio-thumb.thumb-4 {
-    background: linear-gradient(135deg, var(--dark) 0%, var(--blue) 100%);
+.portfolio-thumb.thumb-vsl video {
+    object-fit: contain;
+    background: var(--darker);
 }
 
-.portfolio-play {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: var(--dark);
-    transition: all 0.3s;
-    cursor: pointer;
+.portfolio-thumb.thumb-portrait {
+    height: 360px;
 }
 
-.portfolio-card:hover .portfolio-play {
-    transform: scale(1.1);
-    background: var(--white);
+.portfolio-thumb.thumb-portrait video {
+    object-fit: contain;
+    background: var(--darker);
 }
 
 .portfolio-info {
@@ -738,7 +750,21 @@ footer {
     }
 
     .portfolio-thumb {
-        height: 200px;
+        height: 220px;
+    }
+
+    .portfolio-thumb.thumb-vsl {
+        aspect-ratio: 4 / 5;
+        height: auto;
+    }
+
+    .portfolio-thumb.thumb-portrait {
+        height: 320px;
+    }
+
+    .portfolio-category {
+        font-size: 20px;
+        margin-top: 30px;
     }
 
     /* CTA */
